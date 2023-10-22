@@ -2,13 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 
-class Student
-{
-    public string Name { get; set; }
-    public int Grade { get; set; }
-    public int Course { get; set; }
-}
-
 class Program
 {
     static void Main(string[] args)
@@ -55,8 +48,7 @@ class Program
         }
 
         // Підрахунок: Порахуйте кількість студентів на кожному курсі.
-        var countByCourse = students.GroupBy(student => student.Course)
-                                    .Select(group => new { Course = group.Key, Count = group.Count() });
+        var countByCourse = students.GroupBy(student => student.Course).Select(group => new { Course = group.Key, Count = group.Count() });
 
         Console.WriteLine("Кількість студентів на кожному курсі:");
         foreach (var item in countByCourse)
@@ -72,5 +64,6 @@ class Program
         {
             Console.WriteLine(info);
         }
+        Console.ReadKey();
     }
 }
