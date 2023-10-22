@@ -14,8 +14,11 @@ class Program
     {
         while (true)
         {
-            // Виводимо меню опцій користувачу.
-            Console.WriteLine("Оберіть операцію:");
+            Console.ForegroundColor = ConsoleColor.Blue; // устанавливаем цвет
+            Console.OutputEncoding = System.Text.Encoding.Unicode;
+            Console.WriteLine("Оберіть операцію від 1 до 7:");
+            Console.ResetColor(); // сбрасываем в стандартный
+            Console.ForegroundColor = ConsoleColor.Cyan; // устанавливаем цвет
             Console.WriteLine("1. Фільтрація чисел більше 10");
             Console.WriteLine("2. Сортування списку фруктів");
             Console.WriteLine("3. Видалення дублікатів рядків");
@@ -23,6 +26,7 @@ class Program
             Console.WriteLine("5. Фільтрація та сортування товарів");
             Console.WriteLine("6. Пошук максимального числа за індексом");
             Console.WriteLine("7. Вийти");
+            Console.ResetColor(); // сбрасываем в стандартный
 
             if (int.TryParse(Console.ReadLine(), out int choice))
             {
@@ -136,11 +140,6 @@ class Program
         int maxNumber = numbers[numbers.IndexOf(numbers.Max())];
 
         Console.WriteLine($"Максимальне число за індексом: {maxNumber}");
+        Console.ReadKey();
     }
-}
-
-class Product
-{
-    public string Name { get; set; }
-    public int Price { get; set; }
 }
