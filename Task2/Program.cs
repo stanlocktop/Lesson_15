@@ -1,19 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+//***7) Завдання:
+
+//У вас є список студентів з такими властивостями: Ім'я (Name), Оцінка (Grade) та Курс (Course). Вам потрібно вирішити наступні завдання, використовуючи LINQ:
+
+//Фільтрація: Знайдіть усіх студентів, які мають оцінку більше або рівну 90.
+//Сортування: Відсортуйте студентів за оцінкою в спадаючому порядку.
+//Групування: Згрупуйте студентів за курсами і виведіть список студентів на кожному курсі.
+//Підрахунок: Порахуйте кількість студентів на кожному курсі.
+//Проекція: Створіть список рядків, які містять ім'я та оцінку кожного студента, наприклад: "Ім'я: Олена, Оцінка: 95".
+//Будь ласка, реалізуйте ці завдання за допомогою LINQ в C# та виведіть результати.
 
 class Program
 {
     static void Main(string[] args)
     {
+        Console.OutputEncoding = System.Text.Encoding.Unicode;
+        Console.ForegroundColor = ConsoleColor.White; // устанавливаем цвет
         List<Student> students = new List<Student>
         {
-            new Student { Name = "Олена", Grade = 95, Course = 3 },
+            new Student { Name = "Олег", Grade = 95, Course = 3 },
             new Student { Name = "Андрій", Grade = 88, Course = 2 },
-            new Student { Name = "Марія", Grade = 92, Course = 4 },
-            new Student { Name = "Петро", Grade = 78, Course = 1 },
+            new Student { Name = "Вікторія", Grade = 92, Course = 4 },
+            new Student { Name = "Владислав", Grade = 78, Course = 1 },
             new Student { Name = "Іван", Grade = 90, Course = 2 },
-            new Student { Name = "Юлія", Grade = 94, Course = 3 },
+            new Student { Name = "Марія", Grade = 94, Course = 3 },
         };
 
         // Фільтрація: Знайдіть усіх студентів, які мають оцінку більше або рівну 90.
