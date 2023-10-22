@@ -14,6 +14,7 @@ class Program
     {
         while (true)
         {
+            // Виводимо меню опцій користувачу.
             Console.WriteLine("Оберіть операцію:");
             Console.WriteLine("1. Фільтрація чисел більше 10");
             Console.WriteLine("2. Сортування списку фруктів");
@@ -61,6 +62,7 @@ class Program
 
     static void FilterNumbers()
     {
+        // Фільтрація: Знайдіть усіх студентів, які мають оцінку більше або рівну 90.
         List<int> numbers = new List<int> { 2, 5, 8, 12, 15, 18, 22 };
         var result = numbers.Where(n => n > 10);
 
@@ -73,6 +75,7 @@ class Program
 
     static void SortFruits()
     {
+        // Сортування: Відсортуйте студентів за оцінкою в спадаючому порядку.
         List<string> fruits = new List<string> { "Яблуко", "Апельсин", "Банан", "Ківі" };
         var result = fruits.OrderBy(fruit => fruit);
 
@@ -85,6 +88,7 @@ class Program
 
     static void RemoveDuplicates()
     {
+        // Видалення дублікатів: Дано список рядків: {"А", "Б", "В", "А", "Г", "В"}. Видаліть всі дублікати і поверніть унікальні рядки.
         List<string> strings = new List<string> { "А", "Б", "В", "А", "Г", "В" };
         var result = strings.Distinct();
 
@@ -97,6 +101,7 @@ class Program
 
     static void CountStudentsAbove90()
     {
+        // Підрахунок: Дано список оцінок студентів {85, 92, 78, 95, 88, 90}. Порахуйте, скільки студентів отримали більше 90 балів.
         List<int> grades = new List<int> { 85, 92, 78, 95, 88, 90 };
         int count = grades.Count(grade => grade > 90);
 
@@ -105,6 +110,7 @@ class Program
 
     static void FilterAndSortProducts()
     {
+        // Фільтрація та сортування: Дано список об'єктів, які представляють товари і мають поля "Назва" і "Ціна". Відфільтруйте товари, які мають ціну менше 50 гривень і відсортуйте їх за зростанням ціни.
         List<Product> products = new List<Product>
         {
             new Product { Name = "ProductA", Price = 30 },
@@ -125,6 +131,7 @@ class Program
 
     static void FindMaxByIndex()
     {
+        // Пошук максимального за індексом: Дано список цілих чисел {10, 25, 8, 45, 15, 30, 55, 5}. Знайдіть максимальне число за індексом (позицією) в списку.
         List<int> numbers = new List<int> { 10, 25, 8, 45, 15, 30, 55, 5 };
         int maxNumber = numbers[numbers.IndexOf(numbers.Max())];
 
